@@ -7,7 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#subTopicNav" data-bs-offset="200">
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Jeevan Vidya Shivir</a>
@@ -22,58 +27,87 @@
     </nav>
 
     <main class="container mt-5 pt-5">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="topics.html">Topics</a></li>
+                <li class="breadcrumb-item active" aria-current="page">The Conscious Self</li>
+            </ol>
+        </nav>
+
         <header class="text-center mb-5">
             <h1 class="display-5 fw-bold">The Conscious Self (Jeevan)</h1>
             <p class="lead">Exploring Our Inner World</p>
         </header>
 
-        <div class="text-center mb-5">
-            <a href="#subtopic1" class="btn btn-outline-secondary m-1">Limited Consciousness</a>
-            <a href="#subtopic2" class="btn btn-outline-secondary m-1">Active Faculties</a>
-            <a href="#subtopic3" class="btn btn-outline-secondary m-1">Shift in Perspective</a>
-        </div>
-
+        <!-- Sub-topic Navigation with Scrollspy -->
+        <nav id="subTopicNav" class="nav nav-pills justify-content-center mb-5 sticky-top bg-light py-2 rounded shadow-sm">
+            <a class="nav-link" href="#subtopic1">Limited Consciousness</a>
+            <a class="nav-link" href="#subtopic2">Active Faculties</a>
+            <a class="nav-link" href="#subtopic3">Shift in Perspective</a>
+        </nav>
+        
         <section id="subtopic1" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightbulb-off-fill me-2" viewBox="0 0 16 16"><path d="M2 6c0-.572.247-1.104.673-1.49.426-.386.963-.61 1.527-.61.572 0 1.104.247 1.49.673.386.426.61.963.61 1.527a4.99 4.99 0 0 1-1.22 3.23.5.5 0 0 1-.832-.55L4.4 8.23A3.99 3.99 0 0 0 6 6c0-.332-.05-.655-.145-.963L2.43 9.47A4.98 4.98 0 0 1 2 6zm10.707 3.536a4.98 4.98 0 0 1-.707 1.707l-1.628-1.628a3.98 3.98 0 0 0-.21-4.483L14.168 1.16a.5.5 0 0 1 .707.707L4.34 12.399a.5.5 0 0 1-.707-.707L8.432 6.89a1.98 1.98 0 0 1 1.527-.61c.332 0 .655.05.963.145l2.487-2.487a.5.5 0 0 1 .707.707L9.95 8.84a4.99 4.99 0 0 1 2.757.7zM8 16a2 2 0 0 1-1-3.72V9.5a.5.5 0 0 1 1 0v2.78a2 2 0 0 1-1 3.72z"/></svg>
                 <h4 class="mb-0">The Problem of Limited Consciousness</h4>
             </div>
             <div class="card-body">
-                <p>The fundamental human problem is that we live in a state of <strong class="term-tooltip" data-bs-toggle="tooltip" title="The state of consciousness where the Self primarily operates based on sensory gratification and survival.">Animal Consciousness (`Jeev Chetna`)</strong>. In this state, only 4.5 of our 10 innate conscious activities are fully functional, primarily oriented toward survival and sensory gratification. The purpose of this self-exploration is to transition to <strong class="term-tooltip" data-bs-toggle="tooltip" title="The awakened state of consciousness where living is guided by understanding Justice, Order, and Truth.">Human Consciousness (`Manav Chetna`)</strong> by awakening the dormant, higher faculties of the Self.</p>
+                <p>The fundamental human problem is that we live in a state of <span class="term-tooltip" data-bs-toggle="tooltip" title="The state of consciousness where the Self primarily operates based on sensory gratification and survival.">Animal Consciousness (`Jeev Chetna`)</span>. In this state, only 4.5 of our 10 innate conscious activities are fully functional. The purpose of this self-exploration is to transition to <span class="term-tooltip" data-bs-toggle="tooltip" title="The awakened state of consciousness where living is guided by understanding Justice, Order, and Truth.">Human Consciousness (`Manav Chetna`)</span> by awakening the dormant, higher faculties of the Self.</p>
             </div>
         </section>
 
         <section id="subtopic2" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gear-wide-connected me-2" viewBox="0 0 16 16"><path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.284-.08c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.08.284c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.187-1.187l-.284.08c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.187l-.08-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.884 5.006a.5.5 0 0 1-.866-.5l2.884-5.006H6.027a.5.5 0 0 1-.433-.75l2.884-5.006a.5.5 0 0 1 .866.5L8.25 7.5h4.723a.5.5 0 0 1 .433.75z"/></svg>
                 <h4 class="mb-0">The Currently Active Faculties of the Self</h4>
             </div>
             <div class="card-body">
                 <p>In the state of Animal Consciousness, our experience is dominated by the activities of three faculties:</p>
                 <ul>
-                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="Tasting; the activity in the Self (Man) of experiencing sensory inputs.">Tasting (Aaswadan)</span> & <span class="term-tooltip" data-bs-toggle="tooltip" title="Selecting; the activity in the Self (Man) of making choices based on taste.">Selecting (Chayan)</span>:</strong> Located in `<span class="term-tooltip" data-bs-toggle="tooltip" title="The faculty in the Self that contains the activities of tasting (Aaswadan) and selecting (Chayan).">Man</span>`, this governs our interaction with the world through sensory preferences (likes/dislikes).</li>
-                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="Weighing; the activity in the Self (Vritti) of comparing thoughts and ideas.">Weighing (Tulan)</span> & <span class="term-tooltip" data-bs-toggle="tooltip" title="Analyzing; the activity in the Self (Vritti) of logically breaking down and examining thoughts.">Analyzing (Vishleshan)</span>:</strong> Located in `<span class="term-tooltip" data-bs-toggle="tooltip" title="The faculty in the Self containing the activities of weighing (Tulan) and analyzing (Vishleshan).">Vritti</span>`, this is responsible for our thought processes, often based on sensory preferences and preconceived beliefs.</li>
-                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="Imaging; the activity in the Self (Chitta) of forming images, desires, ambitions, and holding memories.">Imaging (Chitran)</span>:</strong> A half-active faculty within `<span class="term-tooltip" data-bs-toggle="tooltip" title="The faculty in the Self that contains the activities of imaging (Chitran) and contemplation (Chintan).">Chitta</span>`, where we hold our desires, ambitions, and assumptions, formed from external influences, societal pressures, and sensory preferences.</li>
+                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The faculty in the Self that contains the activities of tasting (Aaswadan) and selecting (Chayan).">Man</span>:</strong> Governs our sensory preferences of "likes" and "dislikes."</li>
+                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The faculty in the Self containing the activities of weighing (Tulan) and analyzing (Vishleshan).">Vritti</span>:</strong> Responsible for our thought processes, comparing and analyzing situations.</li>
+                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The faculty in the Self that contains the activities of imaging (Chitran) and contemplation (Chintan).">Chitta</span>:</strong> Where we hold our desires, ambitions, and assumptions, but without the guidance of correct understanding.</li>
                 </ul>
             </div>
         </section>
 
         <section id="subtopic3" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
-                <h4 class="mb-0">The Shift in Perspective: From Likes and Profit to Justice and Truth</h4>
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-sign-turn-right-fill me-2" viewBox="0 0 16 16"><path d="M9.05.435c.58-.58 1.52-.58 2.1 0l4.5 4.5c.58.58.58 1.52 0 2.1l-4.5 4.5c-.58.58-1.52.58-2.1 0l-4.5-4.5c-.58-.58-.58-1.52 0-2.1l4.5-4.5zM2.5 8.54V12.5a.5.5 0 0 0 1 0V9.412c0-.358.14-.695.39-.945L5.04 7.31c.58-.58 1.52-.58 2.1 0l1.75 1.75a.5.5 0 0 0 .707-.707L7.18 5.938a2.5 2.5 0 0 0-3.536 0L2.5 7.088V4.5a.5.5 0 0 0-1 0v4.04z"/></svg>
+                <h4 class="mb-0">The Shift in Perspective</h4>
             </div>
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Proposal</h6>
-                <p>The key to transitioning from conflict to harmony lies in shifting the basis of our evaluation—our <span class="term-tooltip" data-bs-toggle="tooltip" title="Perspective or worldview; the lens through which one evaluates reality.">perspective (`drishti`)</span>.</p>
-                <hr>
-                <h6 class="card-subtitle mb-2 text-muted">Explanation</h6>
-                <p>In Animal Consciousness, our perspectives are limited and self-centered. In Human Consciousness, they become universal and conducive to mutual fulfillment.</p>
-                <p>We must shift from limited perspectives (Likes/Dislikes, Profit/Loss, Sensation/Health) to resolved perspectives (<span class="term-tooltip" data-bs-toggle="tooltip" title="The recognition and fulfillment of values in human-to-human relationships, leading to mutual happiness.">Justice</span>, <span class="term-tooltip" data-bs-toggle="tooltip" title="The intrinsic nature of a unit that ensures its integrity and participation in the larger order.">Order</span>, <span class="term-tooltip" data-bs-toggle="tooltip" title="The understanding of reality as it is, as coexistence.">Truth</span>).</p>
-                <h6 class="card-subtitle mb-2 text-muted">Example</h6>
-                <p class="card-text">A marriage might be judged "successful" from a limited perspective based on its form—a lavish ceremony. However, its true success, evaluated from a resolved perspective, depends on the substance of the relationship: mutual understanding and harmonious behavior.</p>
-                <h6 class="card-subtitle mb-2 text-muted">Short Rule / Tip</h6>
-                <p class="card-text">By consciously shifting our internal frame of reference from likes, profit, and sensation to Justice, Order, and Truth, we move from self-centered preferences to a universal understanding of harmony.</p>
+                <p>The key to transitioning from conflict to harmony lies in shifting the basis of our evaluation—our <span class="term-tooltip" data-bs-toggle="tooltip" title="Perspective or worldview; the lens through which one evaluates reality.">perspective (`drishti`)</span>—from being limited and self-centered to being universal and conducive to mutual fulfillment.</p>
+                
+                <div class="table-responsive mt-4">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-light text-center">
+                            <tr>
+                                <th scope="col">Limited Perspectives (Source of Conflict)</th>
+                                <th scope="col">Resolved Perspectives (Source of Harmony)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="Likes/Dislikes; a limited perspective where evaluation is based on sensory pleasure.">Priy (Likes/Dislikes)</span>:</strong> Evaluation based on what is pleasant or unpleasant to the senses.</td>
+                                <td><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The recognition and fulfillment of values in human-to-human relationships, leading to mutual happiness.">Nyaay (Justice)</span>:</strong> Evaluation based on ensuring mutual fulfillment in human relationships.</td>
+                            </tr>
+                            <tr>
+                                <td><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="Profit/Loss; a limited perspective where evaluation is based on material gain.">Hit (Profit/Loss)</span>:</strong> Evaluation based on material gain, benefit, or loss.</td>
+                                <td><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The intrinsic nature or order of a unit that ensures its integrity and participation in the larger order.">Dharma (Order)</span>:</strong> Evaluation based on conforming to the inherent harmony and orderliness in all of existence.</td>
+                            </tr>
+                            <tr>
+                                <td><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="Sensation/Health; a limited perspective where evaluation is based on what is favorable for the body.">Labh (Health/Sensation)</span>:</strong> Evaluation based on what is favorable for the body or provides a pleasant sensation.</td>
+                                <td><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The understanding of reality as it is, as coexistence.">Satya (Truth)</span>:</strong> Evaluation based on understanding reality as it truly is, free from assumptions.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
-
+        
         <!-- Topic Navigation -->
         <section class="card shadow-sm mt-5">
             <div class="card-header bg-light">
@@ -91,11 +125,17 @@
         </section>
 
     </main>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTopBtn" class="btn btn-primary rounded-circle shadow-lg" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
+    </a>
+
     <footer class="bg-light text-center text-lg-start mt-5">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">© 2025 Jeevan Vidya Shivir Study Guide</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
-
 
