@@ -3,17 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivir Study Guide - Home</title>
-    <!-- Bootstrap CSS -->
+    <title>Jeevan Vidya Shivir - Study Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
         <div class="container">
@@ -23,72 +17,65 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="topics.html">Topics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="glossary.html">Glossary</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Header -->
-    <header class="hero-section text-white text-center d-flex align-items-center justify-content-center">
+    <!-- Hero Section -->
+    <header class="hero-section text-center d-flex align-items-center justify-content-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">A Comprehensive Study Guide</h1>
-            <p class="lead">Exploring the Core Teachings of the Jeevan Vidya Shivir</p>
+            <h1 class="display-1 fw-bold">A Comprehensive Study Guide</h1>
+            <p class="lead fs-4">Exploring the Core Teachings of the Jeevan Vidya Shivir</p>
+            <a href="topics.html" class="btn btn-light btn-lg mt-3">Start Learning</a>
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container my-5">
         <div class="row">
-            <!-- Sidebar Navigation -->
-            <div class="col-lg-3">
-                <div class="sidebar-nav sticky-top">
-                    <h4 class="mb-3">Workshop Sessions</h4>
+            <!-- Sidebar with session links -->
+            <aside class="col-lg-3">
+                <div class="sticky-top" style="top: 80px;">
+                    <h3 class="mb-3">Workshop Sessions</h3>
                     <div class="list-group">
                         <a href="topic-foundations.html" class="list-group-item list-group-item-action">1. The Foundational Premise</a>
-                        <a href="topic-self.html" class="list-group-item list-group-item-action">2. The Conscious Self</a>
+                        <a href="topic-self.html" class="list-group-item list-group-item-action">2. The Conscious Self (Jeevan)</a>
                         <a href="topic-existence.html" class="list-group-item list-group-item-action">3. The Nature of Existence</a>
-                        <a href="topic-conduct.html" class="list-group-item list-group-item-action">4. Humane Conduct</a>
+                        <a href="topic-conduct.html" class="list-group-item list-group-item-action">4. Humane Conduct (Manaviya Acharan)</a>
                         <a href="topic-way-forward.html" class="list-group-item list-group-item-action">5. The Way Forward</a>
                     </div>
                 </div>
-            </div>
+            </aside>
 
-            <!-- Main Content Area -->
+            <!-- Main content area -->
             <div class="col-lg-9">
-                <!-- Introduction Section -->
-                <section id="introduction" class="mb-5 p-4 bg-light rounded-3 shadow-sm">
-                    <h2 class="border-bottom pb-2 mb-3">Welcome to the Shivir</h2>
-                    <p>This study guide encapsulates the core teachings of a 10-day Jeevan Vidya "shivir," a profound workshop dedicated to the process of "Consciousness transformation." Its core mission is to guide the individual from a state of open queries, confusion, and conflict to one of comprehensive resolution, fulfillment, and harmony.</p>
-                    <p>The workshop, facilitated by a long-term student of the philosophy (*darshan*) of A. Nagraj, aims to provide clarity on life's most fundamental questions.</p>
+                <section id="introduction">
+                    <h2>Welcome to the Shivir</h2>
+                    <p class="lead">This study guide encapsulates the core teachings of a 10-day Jeevan Vidya "shivir," a profound workshop dedicated to the process of "Consciousness transformation."</p>
+                    <p>Its core mission is to guide the individual from a state of open queries, confusion, and conflict to one of comprehensive resolution, fulfillment, and harmony.</p>
                 </section>
-
-                <!-- Workshop Flow Section -->
-                <section id="flow" class="text-center">
-                    <h2 class="border-bottom pb-2 mb-4">A Journey of Self-Exploration</h2>
-                    <p class="lead mb-5">The guide is structured to mirror the workshop's progression. It is a journey from the self, to the cosmos, and back to the art of living.</p>
-                    <a href="topics.html" class="btn btn-primary btn-lg mt-4">Explore All Topics</a>
+                <hr class="my-4">
+                <section id="overview">
+                    <h3>Workshop Overview</h3>
+                    <ul>
+                        <li><strong>Purpose:</strong> To provide clarity on life's most fundamental questions through self-exploration.</li>
+                        <li><strong>Agenda:</strong> A 10-day immersive journey covering the Self, Existence, and Humane Conduct.</li>
+                        <li><strong>Participants:</strong> Individuals from diverse backgrounds seeking deeper meaning and resolution in their lives.</li>
+                    </ul>
+                    <a href="topics.html" class="btn btn-primary">Explore All Topics</a>
                 </section>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-light text-center text-lg-start mt-5">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
             © 2025 Jeevan Vidya Shivir Study Guide
         </div>
     </footer>
-
-    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
