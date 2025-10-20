@@ -1,0 +1,40 @@
+/* General Body Styles */
+body {
+    padding-top: 70px; /* Adjust for fixed navbar */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hero Section on Home Page */
+.hero-section {
+    background: url('https://placehold.co/1920x600/E0E7FF/4F46E5?text=Shivir+Study+Guide') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 8rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Header Customization */
+.card-header.bg-primary {
+    background-color: #007bff !important;
+}
+
+/* Main content link styling */
+.main-content-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-content-link .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* NEW STYLE for Hoverable Glossary Terms */
+.term-tooltip {
+    color: #0d6efd; /* Bootstrap primary blue */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: help;
+}
+
