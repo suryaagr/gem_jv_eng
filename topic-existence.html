@@ -7,7 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#subTopicNav" data-bs-offset="200">
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Jeevan Vidya Shivir</a>
@@ -22,54 +27,64 @@
     </nav>
 
     <main class="container mt-5 pt-5">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="topics.html">Topics</a></li>
+                <li class="breadcrumb-item active" aria-current="page">The Nature of Existence</li>
+            </ol>
+        </nav>
+
         <header class="text-center mb-5">
             <h1 class="display-5 fw-bold">The Nature of Existence</h1>
             <p class="lead">Our Place in the Cosmos</p>
         </header>
 
-        <div class="text-center mb-5">
-            <a href="#subtopic1" class="btn btn-outline-secondary m-1">Existence as Coexistence</a>
-            <a href="#subtopic2" class="btn btn-outline-secondary m-1">Four Orders of Nature</a>
-            <a href="#subtopic3" class="btn btn-outline-secondary m-1">Progression of Consciousness</a>
-        </div>
-
+        <!-- Sub-topic Navigation with Scrollspy -->
+        <nav id="subTopicNav" class="nav nav-pills justify-content-center mb-5 sticky-top bg-light py-2 rounded shadow-sm">
+            <a class="nav-link" href="#subtopic1">Existence as Coexistence</a>
+            <a class="nav-link" href="#subtopic2">Four Orders of Nature</a>
+            <a class="nav-link" href="#subtopic3">Progression of Consciousness</a>
+        </nav>
+        
         <section id="subtopic1" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-infinity me-2" viewBox="0 0 16 16"><path d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015L8 6.978Zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916L8.656 7.75Z"/></svg>
                 <h4 class="mb-0">Existence as Coexistence: Units Submerged in Space</h4>
             </div>
             <div class="card-body">
-                <p><span class="term-tooltip" data-bs-toggle="tooltip" title="The ultimate reality, defined as the coexistence of Units (Prakriti) and Space (Vyapak).">Existence (`Astitva`)</span> is proposed to be the <strong>coexistence</strong> of two fundamental realities: <strong><span class="term-tooltip" data-bs-toggle="tooltip" title="Nature; the collection of all units, across the four orders.">Units</span></strong> (`Prakriti`) and <strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The all-pervading, inactive, and transparent reality in which all units exist. Also known as Shunya.">Space</span></strong> (`Shunya` or `Vyapak`).</p>
-                <ul>
-                    <li><strong>Units (`Prakriti`):</strong> Limited in size, active, self-organised. (e.g., dust, planets, plants, animals).</li>
-                    <li><strong>Space (`Shunya`/`Vyapak`):</strong> Unlimited, transparent, inactive, and the source of energy.</li>
-                </ul>
+                <p><span class="term-tooltip" data-bs-toggle="tooltip" title="The ultimate reality, defined as the coexistence of Units (Prakriti) and Space (Vyapak).">Existence (`Astitva`)</span> is proposed to be the <strong>coexistence</strong> of two fundamental realities: <strong>Units</strong> (`Prakriti`) and <strong>Space</strong> (`Shunya` or `Vyapak`). Every "thing" we see is a Unit, and all units are submerged in Space.</p>
+                <p>Units are limited, active, and organized. Space is unlimited, inactive, and the source of all energy.</p>
             </div>
         </section>
 
         <section id="subtopic2" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-boxes me-2" viewBox="0 0 16 16"><path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567L11.75 7.504 9.008 5.937 7.5 6.732v.001l1.508 1.566ZM11.75 4.933 9.008 3.367 7.5 4.161 6.008 3.367 8.75 1.796l2.742 1.567v3.134L11.75 4.933ZM4.25 4.933v-3.134L1.508 3.367v3.134L4.25 4.933ZM7.5 1.796l-2.75 1.571L2.008 1.796 4.75.229 7.5 1.796Z"/></svg>
                 <h4 class="mb-0">The Four Orders of Nature</h4>
             </div>
             <div class="card-body">
-                <p>All units in nature can be classified into four distinct orders, each with its own <span class="term-tooltip" data-bs-toggle="tooltip" title="The natural characteristic of a unit in any of the four orders.">innate nature (`Swabhav`)</span> and <span class="term-tooltip" data-bs-toggle="tooltip" title="The intrinsic nature of a unit that ensures its integrity and participation in the larger order.">inherent orderliness (`Dharma`)</span>.</p>
+                <p>All units in nature can be classified into four distinct orders, each with its own innate nature and inherent orderliness.</p>
                 <ol>
-                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The Material Order; one of the four orders of nature.">Material Order (Padarth Avastha)</span>:</strong> Innate nature is composition/decomposition. Orderliness is existence.</li>
-                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The Plant/Bio Order; one of the four orders of nature.">Plant/Bio Order (Pran Avastha)</span>:</strong> Innate nature is to enhance/worsen. Orderliness is growth.</li>
-                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The Animal Order; one of the four orders of nature.">Animal Order (Jeev Avastha)</span>:</strong> Innate nature is brutality/gentleness. Orderliness is the will to live.</li>
-                    <li><strong><span class="term-tooltip" data-bs-toggle="tooltip" title="The Human Order or Knowledge Order; one of the four orders of nature.">Human Order (Gyan Avastha)</span>:</strong> In its unawakened state, its nature is wretchedness, cunningness, and brutality. In its awakened state, this transforms into steadfastness, courage, and generosity. Its inherent orderliness is the will to live with happiness.</li>
+                    <li><strong>Material Order (Padarth Avastha):</strong> Non-living matter. Innate nature is composition/decomposition.</li>
+                    <li><strong>Plant/Bio Order (Pran Avastha):</strong> All flora. Innate nature is to enhance or worsen.</li>
+                    <li><strong>Animal Order (Jeev Avastha):</strong> All fauna. Innate nature is brutality/gentleness.</li>
+                    <li><strong>Human Order (Gyan Avastha):</strong> The order of knowledge. Awakened nature is steadfastness, courage, and generosity.</li>
                 </ol>
             </div>
         </section>
 
         <section id="subtopic3" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-graph-up-arrow me-2" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/></svg>
                 <h4 class="mb-0">The Progression of Consciousness</h4>
             </div>
             <div class="card-body">
                 <p>The four orders represent a natural evolutionary progression. The material order provides the basis for the plant order, which provides the basis for the animal body, and so on. The emergence of the conscious <span class="term-tooltip" data-bs-toggle="tooltip" title="The conscious, non-material unit that coexists with the physical Body (Sharir).">Self (`Jeevan`)</span> is a natural part of this development. The subsequent "awakening" of the Self's dormant higher faculties—the shift from <span class="term-tooltip" data-bs-toggle="tooltip" title="The state of consciousness where the Self primarily operates based on sensory gratification and survival.">Animal Consciousness</span> to <span class="term-tooltip" data-bs-toggle="tooltip" title="The awakened state of consciousness where living is guided by understanding Justice, Order, and Truth.">Human Consciousness</span>—is the next logical and necessary stage in this grand evolutionary progression.</p>
             </div>
         </section>
-
+        
         <!-- Topic Navigation -->
         <section class="card shadow-sm mt-5">
             <div class="card-header bg-light">
@@ -87,11 +102,17 @@
         </section>
 
     </main>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTopBtn" class="btn btn-primary rounded-circle shadow-lg" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
+    </a>
+
     <footer class="bg-light text-center text-lg-start mt-5">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">© 2025 Jeevan Vidya Shivir Study Guide</div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
-
 
