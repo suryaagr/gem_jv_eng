@@ -6,7 +6,7 @@ body {
 
 /* Hero Section on Home Page */
 .hero-section {
-    background: url('https://placehold.co/1920x600/007bff/007bff?text=.') no-repeat center center;
+    background: url('https://placehold.co/1920x600/4F46E5') no-repeat center center;
     background-size: cover;
     color: white;
     padding: 8rem 0;
@@ -30,7 +30,7 @@ body {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* NEW STYLE for Hoverable Glossary Terms */
+/* Style for Hoverable Glossary Terms */
 .term-tooltip {
     color: #0d6efd; /* Bootstrap primary blue */
     text-decoration: underline;
@@ -38,8 +38,54 @@ body {
     cursor: help;
 }
 
+/* === NEW UX ENHANCEMENT STYLES === */
 
+/* Scroll Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    position: fixed;
+    top: 56px; /* Default bootstrap navbar height */
+    z-index: 1031; /* Higher than navbar */
+}
+.progress-bar {
+    height: 8px;
+    background: #0d6efd;
+    width: 0%;
+}
 
+/* Back to Top Button */
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 1;
+}
 
+/* Breadcrumbs */
+.breadcrumb {
+    background-color: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+}
 
+/* Active Highlighting for Sub-topic Nav */
+#subTopicNav.sticky-top {
+    z-index: 1020;
+}
+#subTopicNav .nav-link {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: #6c757d;
+}
+#subTopicNav .nav-link.active {
+    background-color: #0d6efd;
+    color: white !important;
+    font-weight: bold;
+}
 
