@@ -7,14 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <!-- Navigation Bar -->
+<body data-bs-spy="scroll" data-bs-target="#subTopicNav" data-bs-offset="200">
+    <!-- Scroll Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Jeevan Vidya Shivir</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -26,74 +27,102 @@
     </nav>
 
     <main class="container mt-5 pt-5">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="topics.html">Topics</a></li>
+                <li class="breadcrumb-item active" aria-current="page">The Foundational Premise</li>
+            </ol>
+        </nav>
+
         <header class="text-center mb-5">
             <h1 class="display-5 fw-bold">The Foundational Premise</h1>
             <p class="lead">Understanding the Human Being</p>
         </header>
 
-        <!-- Subtopic Navigation -->
-        <div class="text-center mb-5">
-            <a href="#subtopic1" class="btn btn-outline-secondary m-1">Self and Body</a>
-            <a href="#subtopic2" class="btn btn-outline-secondary m-1">Four Dimensions</a>
-            <a href="#subtopic3" class="btn btn-outline-secondary m-1">The Ultimate Goal</a>
-        </div>
-
-        <!-- Subtopic 1 Card -->
+        <!-- Sub-topic Navigation with Scrollspy -->
+        <nav id="subTopicNav" class="nav nav-pills justify-content-center mb-5 sticky-top bg-light py-2 rounded shadow-sm">
+            <a class="nav-link" href="#subtopic1">Self and Body</a>
+            <a class="nav-link" href="#subtopic2">Four Dimensions</a>
+            <a class="nav-link" href="#subtopic3">Ultimate Goal</a>
+        </nav>
+        
         <section id="subtopic1" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people-fill me-2" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg>
                 <h4 class="mb-0">The Human Being as a Coexistence of Self and Body</h4>
             </div>
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Proposal</h6>
-                <p class="card-text">A human is a coexistence of two distinct but interconnected realities: the <strong class="term-tooltip" data-bs-toggle="tooltip" title="The conscious, non-material unit that coexists with the physical Body (Sharir).">Self</strong> (`Jeevan`) and the <strong class="term-tooltip" data-bs-toggle="tooltip" title="The material, physiochemical instrument of the human being.">Body</strong> (the material entity, `Sharir`). The Self is the entity that experiences, desires, and understands. The Body is the physiochemical instrument that the Self uses to interact with the material world.</p>
-                <hr>
-                <h6 class="card-subtitle mb-2 text-muted">Explanation</h6>
-                <p class="card-text">Much of human suffering arises from a fundamental misunderstanding of who and what we are. The consequence of confusing these two realities is profound. We place our entire identity in the body, leading to insecurity and misplaced effort. The differences between these two realities are stark:</p>
-                <ul>
-                    <li><strong>Needs:</strong> The Self needs happiness, trust, respect (qualitative). The Body needs food, shelter (quantitative).</li>
-                    <li><strong>Activities:</strong> The Self is always desiring, thinking, knowing (continuous). The Body's activities like eating and breathing are temporary.</li>
-                </ul>
-                <h6 class="card-subtitle mb-2 text-muted">Example</h6>
-                <p class="card-text">As the facilitator noted, "we admire ourselves in the mirror... because we think I am the hair." This simple observation reveals how we anchor our sense of self in a temporary and changing physical form.</p>
-                <h6 class="card-subtitle mb-2 text-muted">Short Rule / Tip</h6>
-                <p class="card-text">Recognize that the need for continuous happiness belongs to the Self, while the need for physical facilities is temporary and for the Body.</p>
+                <p>The core proposal is that a human is a coexistence of two distinct but interconnected realities: the <span class="term-tooltip" data-bs-toggle="tooltip" title="The conscious, non-material unit that coexists with the physical Body.">Self (`Jeevan`)</span> and the <span class="term-tooltip" data-bs-toggle="tooltip" title="The material, physiochemical instrument of the human being.">Body (`Sharir`)</span>. The Self is the entity that experiences, desires, and understands; the Body is the instrument the Self uses to interact with the material world.</p>
+                <p>Confusing these two realities leads to insecurity and misplaced effort. We anchor our sense of self in a temporary physical form, but our true needs—like happiness, trust, and respect—belong to the conscious Self.</p>
+                
+                <!-- ADDED TABLE -->
+                <div class="table-responsive mt-4">
+                    <h5 class="text-center mb-3">Key Differences: Self vs. Body</h5>
+                    <table class="table table-bordered table-striped text-center">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">Attribute</th>
+                                <th scope="col">The Self (Jeevan)</th>
+                                <th scope="col">The Body (Sharir)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Needs</strong></td>
+                                <td>Happiness, Trust, Respect (qualitative)</td>
+                                <td>Food, Shelter, Clothing (quantitative)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Activities</strong></td>
+                                <td>Desiring, Thinking, Believing, Knowing</td>
+                                <td>Breathing, Digestion, Heartbeat</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Nature of Activities</strong></td>
+                                <td>Continuous (e.g., desire for happiness is always present)</td>
+                                <td>Temporary (e.g., eating is for a limited time)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Response</strong></td>
+                                <td>Knowing, Assuming, Recognizing, Fulfilling</td>
+                                <td>Recognizing, Fulfilling</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </section>
 
-        <!-- Subtopic 2 Card -->
         <section id="subtopic2" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bounding-box me-2" viewBox="0 0 16 16"><path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2H5zm6 1v2h2v6h-2v2H5v-2H3V5h2V3h6zm-1 1H6v1h4V4zm4 11H1V6h4v1h6V6h4v9zM1 1h3v1H1V1zm1 13h3v1H2v-1zM12 1h3v1h-3V1zm1 13h3v1h-3v-1z"/></svg>
                 <h4 class="mb-0">The Four Dimensions of Human Living</h4>
             </div>
             <div class="card-body">
                 <p>Our experience of life unfolds across four interconnected dimensions. Conflict or harmony in any one of these affects all the others.</p>
                 <ol>
-                    <li><strong>Material (Bhautik):</strong> Interaction with physical reality, our work, and our relationship with nature.</li>
-                    <li><strong>Behavioral (Vyavahar):</strong> Interaction with other human beings, including family and society.</li>
-                    <li><strong>Intellectual (Baudhik):</strong> The inner realm of our thoughts, ideas, beliefs, and worldview.</li>
-                    <li><strong>Spiritual (Adhyatmik):</strong> The direct experience of understanding reality as it is, being in harmony with all of existence.</li>
+                    <li><strong>Material (Bhautik):</strong> Interaction with physical reality, work, and nature.</li>
+                    <li><strong>Behavioral (Vyavahar):</strong> Interaction with other human beings.</li>
+                    <li><strong>Intellectual (Baudhik):</strong> The inner realm of thoughts, ideas, and beliefs.</li>
+                    <li><strong>Spiritual (Adhyatmik):</strong> The direct experience of understanding reality as it is.</li>
                 </ol>
             </div>
         </section>
 
-        <!-- Subtopic 3 Card -->
         <section id="subtopic3" class="card shadow-sm mb-4">
-            <div class="card-header bg-primary text-white">
-                <h4 class="mb-0">The Ultimate Goal: Comprehensive <span class="term-tooltip" data-bs-toggle="tooltip" title="Resolution or Comprehensive Happiness; a state of non-conflict across all four dimensions of human living.">Happiness (Samadhan)</span></h4>
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bullseye me-2" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/><path d="M8 11a3 3 0 1 1 8 5a3 3 0 0 1 0 6zm0 1a4 4 0 1 0 8 4a4 4 0 0 0 0-8z"/><path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+                <h4 class="mb-0">The Ultimate Goal: Comprehensive Happiness (Samadhan)</h4>
             </div>
             <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Proposal</h6>
-                <p class="card-text"><strong>Happiness</strong> is "a state of non-conflict in every aspect of my living." It is a state of harmony and resolution across all four dimensions. Conversely, <strong>Unhappiness</strong> is a state of conflict or contradiction.</p>
-                <hr>
-                <h6 class="card-subtitle mb-2 text-muted">Explanation</h6>
-                <p class="card-text">This unhappiness often stems from being "preoccupied." A problem in one dimension can quickly snowball into a crisis across all of them.</p>
-                 <h6 class="card-subtitle mb-2 text-muted">Example</h6>
-                <p class="card-text">A physical irritation (material level) can lead to a fight with a family member (behavioral problem). This escalates into an internal debate (intellectual problem), and can culminate in questioning the creator of the universe (spiritual problem).</p>
-                <h6 class="card-subtitle mb-2 text-muted">Short Rule / Tip</h6>
-                <p class="card-text">Achieving a state of comprehensive happiness, or `<span class="term-tooltip" data-bs-toggle="tooltip" title="Resolution or Comprehensive Happiness; a state of non-conflict across all four dimensions of human living.">Samadhan</span>`, means resolving these interconnected conflicts and is the fundamental and universal goal of human life.</p>
+                <p><strong>Happiness</strong> is "a state of non-conflict in every aspect of my living." It is a state of harmony and resolution across all four dimensions. <strong>Unhappiness</strong> is a state of conflict or contradiction.</p>
+                <p>Achieving a state of comprehensive happiness, or `<span class="term-tooltip" data-bs-toggle="tooltip" title="Resolution or Comprehensive Happiness; a state of non-conflict across all four dimensions of human living.">Samadhan</span>`, is the fundamental and universal goal of human life.</p>
             </div>
         </section>
-
+        
         <!-- Topic Navigation -->
         <section class="card shadow-sm mt-5">
             <div class="card-header bg-light">
@@ -111,6 +140,12 @@
         </section>
 
     </main>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="backToTopBtn" class="btn btn-primary rounded-circle shadow-lg" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg>
+    </a>
+
     <footer class="bg-light text-center text-lg-start mt-5">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">© 2025 Jeevan Vidya Shivir Study Guide</div>
     </footer>
@@ -118,5 +153,4 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
 
