@@ -6,7 +6,7 @@ body {
 
 /* Hero Section on Home Page */
 .hero-section {
-    background: url('https://placehold.co/1920x600/E0E7FF/E0E7FF?text=.') no-repeat center center;
+    background: url('https://placehold.co/1920x600/4F46E5/4F46E5?text=.') no-repeat center center;
     background-size: cover;
     color: white;
     padding: 8rem 0;
@@ -37,6 +37,7 @@ body {
     text-decoration-style: dotted;
     cursor: help;
 }
+
 
 
 
